@@ -1,11 +1,9 @@
 class BitcoinsController < ApplicationController
 
   def index
-    bitcoin = 1.0
+    bitcoin = params["amount"]
   
-    # connect to the Coindesk API
-    # DON'T CHANGE THIS CODE
-    # ----------------------
+
     require "net/http"
     require "json"
     url = "https://api.coindesk.com/v1/bpi/currentprice.json"
